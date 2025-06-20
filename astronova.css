@@ -1,11 +1,11 @@
-/*=============== GOOGLE FONTS ===============*/
+/*======================================== GOOGLE FONTS =================================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap');
 
-/*=============== VARIABLES ===============*/
+/*======================================== VARIABLES ========================================*/
 :root {
   --header-height: 3.5rem;
   
-  /*========== Colors ==========*/
+  /*===================================== Colors ========================================*/
   --primary-color: #6051d4;
   --primary-color-alt: #5649c0;
   --title-color: #f5f6fa;
@@ -15,7 +15,7 @@
   --container-color: #2f3640;
   --border-color: #353b48;
   
-  /*========== Font and typography ==========*/
+  /*=========================================== Font and typography ======================================*/
   --body-font: 'Poppins', sans-serif;
   --title-font: 'Orbitron', sans-serif;
   --biggest-font-size: 2.5rem;
@@ -27,14 +27,14 @@
   --small-font-size: .875rem;
   --smaller-font-size: .75rem;
   
-  /*========== Font weight ==========*/
+  /*==================================== Font weight ===================================*/
   --font-light: 300;
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
   
-  /*========== Margins Bottom ==========*/
+  /*============================================== Margins Bottom =====================================*/
   --mb-0-5: .5rem;
   --mb-0-75: .75rem;
   --mb-1: 1rem;
@@ -43,13 +43,13 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
   
-  /*========== z index ==========*/
+  /*======================================== z index ====================================*/
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
 
-/*=============== BASE ===============*/
+/*================================================== BASE ======================================*/
 * {
   margin: 0;
   padding: 0;
@@ -91,7 +91,7 @@ button {
   font-family: var’anova.js’(—body-font);
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============-===================================== REUSABLE CSS CLASSES =======-======================================*/
 .container {
   max-width: 1200px;
   margin-inline: auto;
@@ -239,7 +239,7 @@ button {
   width: 60%;
 }
 
-/*=============== VIDEO BACKGROUND ===============*/
+/*======================================== VIDEO BACKGROUND ====================================*/
 .video-background {
   position: fixed;
   top: 0;
@@ -352,7 +352,7 @@ button {
   box-shadow: 0 6px 20px rgba(108, 92, 231, 0.5);
 }
 
-/*=============== NEWS & ARTICLES ===============*/
+/*============================================ NEWS & ARTICLES ======---------------------===================*/
 .news-stricles {
   background-color: rgba(47, 54, 64, 0.8);
   backdrop-filter: blur(10px);
@@ -444,7 +444,7 @@ button {
   }
 }
 
-/*=============== EVENTS ===============*/
+/*======================================================= EVENTS =========================================*/
 .events {
   padding: 5rem 0;
   background-color: rgba(30, 39, 46, 0.8);
@@ -515,7 +515,7 @@ button {
   background: var(--primary-color);
 }
 
-/*=============== JOIN US ===============*/
+/*===================================================== JOIN US =====================================*/
 .join-us {
   padding: 5rem 0;
   background-color: rgba(47, 54, 64, 0.8);
@@ -538,7 +538,7 @@ button {
 
 .left-side {
   flex: 1;
-  background: url('left.png') center/cover no-repeat;
+  background: url('astro-image/left.png') center/cover no-repeat;
   display: none;
 }
 
@@ -625,7 +625,7 @@ button {
   font-weight: var(--font-medium);
 }
 
-/*=============== MODAL ===============*/
+/*============================================== MODAL =========================================*/
 .modal {
   display: none;
   position: fixed;
@@ -662,7 +662,7 @@ button {
   color: var(--primary-color);
 }
 
-/*=============== FOOTER ===============*/
+/*=========================================== FOOTER ============--=============================*/
 .foot {
   background-color: var(--container-color);
   padding: 1.5rem 0;
@@ -670,7 +670,7 @@ button {
   font-size: var(--small-font-size);
 }
 
-/*=============== SCROLL UP ===============*/
+/*======================================== SCROLL UP =====================================*/
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -699,7 +699,7 @@ button {
   bottom: 3rem;
 }
 
-/*=============== SCROLL BAR ===============*/
+/*============================================ SCROLL BAR ==========================================*/
 ::-webkit-scrollbar {
   width: 0.6rem;
   background: var(--container-color);
@@ -710,7 +710,7 @@ button {
   border-radius: 0.5rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
+/*==================================================== BREAKPOINTS ===========================================*/
 @media screen and (min-width: 992px) {
   .left-side {
     display: block;
@@ -771,7 +771,7 @@ button {
   }
 }
 
-/*=============== ANIMATIONS ===============*/
+/*===================================================== ANIMATIONS =======================================*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
