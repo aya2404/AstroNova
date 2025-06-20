@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroNova</title>
+    <link rel="stylesheet" href="astronova.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="bkgrnd.mp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <img src="planet22.png" alt="AstroNova Logo" class="nav-logo-img">
+                AstroNova
+            </a>
+            <div class="menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active-link">Home</a></li>
+                    <li><a href="#news" class="nav-link">News & Articles</a></li>
+                    <li><a href="#events" class="nav-link">Events</a></li>
+                    <li><a href="#join-us" class="nav-link">Join us</a></li>
+                </ul>
+                <i class="fas fa-times close" id="nav-close"></i>
+            </div>
+            <i class="fas fa-bars toggle" id="nav-toggle"></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section class="home section" id="home">
+            <div class="home-container container">
+                <div class="home-content">
+                    <h1 class="home-title">Welcome to Astronova</h1>
+                    <h2 class="section__subtitle">Explore the Universe with Us!</h2>
+                    <p class="home-description">
+                        At Astronova, we are passionate about space exploration, 
+                        astronomy, and the mysteries of the cosmos.<br> Whether you’re a 
+                        space enthusiast, an aspiring astronomer, or just curious about 
+                        the universe, our club is the perfect place for you!
+                    </p>
+                    <a href="#join-us" class="button">Join Us</a>
+                </div>
+                <img src="moon.png" alt="Moon" class="moon">
+            </div>
+        </section>
+
+        <!-- News & Articles Section -->
+        <section class="news-stricles section" id="news">
+            <h2 class="section__title">Your Window to Space</h2>
+            <h3 class="section__subtitle">Astronomy News & Articles</h3>
+            <div class="news-container container">
+                <div class="news-card">
+                    <img src="discovery.jpg" alt="Discovery" class="news-img">
+                    <h3 class="tittle-of-article">Accidental Astronomical Discoveries</h3>
+                    <p class="the-news">
+                        Discover how amateur astronomers and enthusiasts have made 
+                        groundbreaking contributions to science...
+                    </p>
+                    <a href="#" class="more-information" data-modal="modal1">Read More</a>
+                </div>
+                <div class="news-card">
+                    <img src="blackhole.jpg" alt="Black Hole" class="news-img">
+                    <h3 class="tittle-of-article">Unveiling the Mysteries of Black Holes</h3>
+                    <p class="the-news">
+                        Explore the latest findings about black holes and their role 
+                        in shaping the universe...
+                    </p>
+                    <a href="#" class="more-information" data-modal="modal2">Read More</a>
+                </div>
+                <div class="news-card">
+                    <img src="exoplanet.jpg" alt="Exoplanet" class="news-img">
+                    <h3 class="tittle-of-article">The Search for Habitable Exoplanets</h3>
+                    <p class="the-news">
+                        Learn about the cutting-edge technology used to detect planets 
+                        beyond our solar system...
+                    </p>
+                    <a href="#" class="more-information" data-modal="modal3">Read More</a>
+                </div>
+                <div class="news-card">
+                    <img src="spacetourism.jpg" alt="Space Tourism" class="news-img">
+                    <h3 class="tittle-of-article">The Future of Space Tourism</h3>
+                    <p class="the-news">
+                        What does the future hold for space travel? Find out how 
+                        companies are making it accessible...
+                    </p>
+                    <a href="#" class="more-information" data-modal="modal4">Read More</a>
+                </div>
+                <div class="news-card">
+                    <img src="mars.jpg" alt="Mars" class="news-img">
+                    <h3 class="tittle-of-article">Colonizing Mars: Challenges</h3>
+                    <p class="the-news">
+                        Delve into the challenges and possibilities of establishing 
+                        human colonies on Mars...
+                    </p>
+                    <a href="#" class="more-information" data-modal="modal5">Read More</a>
+                </div>
+                <div class="news-card">
+                    <img src="mars.jpg" alt="Mars" class="news-img">
+                    <h3 class="tittle-of-article">Colonizing Mars: Challenges</h3>
+                    <p class="the-news">
+                        Delve into the challenges and possibilities of establishing 
+                        human colonies on Mars...
+                    </p>
+                    <a href="#" class="more-information" data-modal="modal5">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="events section" id="events">
+            <h2 class="section__title">Cosmic Countdown</h2>
+            <h3 class="section__subtitle">The Universe Has a Show for You!</h3>
+            <p class="home-description" style="text-align: center;">
+                From dazzling meteor showers to breathtaking eclipses, the sky is 
+                full of cosmic magic.<br> Stay tuned for the most spectacular celestial 
+                events happening soon!
+            </p>
+            <div class="event-sweper container">
+                <div class="swiper-wrapper">
+                    <div class="event-card swiper-slide">
+                        <img src="qua.png" alt="Quadrantids" class="event-img">
+                        <div class="event-details">
+                            <h3>🌠 Quadrantids Meteor Shower</h3>
+                            <p>Date: January 3-4, 2025</p>
+                            <p>Details: One of the year's first meteor showers, peaking at 40 meteors per hour.</p>
+                        </div>
+                    </div>
+                    <div class="event-card swiper-slide">
+                        <img src="SM.png" alt="Supermoon" class="event-img">
+                        <div class="event-details">
+                            <h3>🌕 Supermoon</h3>
+                            <p>Date: March 10, 2025</p>
+                            <p>Details: The moon will appear larger and brighter as it reaches perigee.</p>
+                        </div>
+                    </div>
+                    <div class="event-card swiper-slide">
+                        <img src="elc.png" alt="Solar Eclipse" class="event-img">
+                        <div class="event-details">
+                            <h3>🌑 Total Solar Eclipse</h3>
+                            <p>Date: April 8, 2024</p>
+                            <p>Details: A rare full solar eclipse visible across North America.</p>
+                        </div>
+                    </div>
+                    <div class="event-card swiper-slide">
+                        <img src="jusa.png" alt="Conjunction" class="event-img">
+                        <div class="event-details">
+                            <h3>🪐 Jupiter & Saturn Conjunction</h3>
+                            <p>Date: June 15, 2025</p>
+                            <p>Details: A close planetary alignment visible in the night sky.</p>
+                        </div>
+                    </div>
+                    <div class="event-card swiper-slide">
+                        <img src="HarvestMoon-removebg-preview.png" alt="Harvest Moon" class="event-img">
+                        <div class="event-details">
+                            <h3>🌕 Harvest Moon</h3>
+                            <p>Date: September 18, 2025</p>
+                            <p>Details: The full moon closest to the autumn equinox, appearing extra bright.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Join Us Section -->
+        <section class="join-us section" id="join-us">
+            <div class="join container">
+                <h2 class="section__title">Embark on Your Astronomical Journey</h2>
+                <div class="join-content">
+                    <div class="left-side"></div>
+                    <div class="right-side">
+                        <h3 class="join-tittle">Join Us</h3>
+                        <div class="input">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <div class="forget">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                            <a href="#">Forgot your password?</a>
+                        </div>
+                        <button class="login-btn">Login</button>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#" id="register-link">Register</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="foot">
+        <p>✨ By Aya Abu Taha ✨</p>
+    </footer>
+
+    <!-- Scroll Up -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Modals for Articles -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Accidental Astronomical Discoveries</h2>
+            <p>Amateur astronomers have made significant contributions to science, from discovering new comets to identifying supernovae. Their passion and dedication have led to breakthroughs that professional astronomers might have missed...</p>
+            <p>Read more about these fascinating stories and how you can get involved in citizen science projects.</p>
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Unveiling the Mysteries of Black Holes</h2>
+            <p>Recent advancements in telescope technology have revealed new insights into black holes, from their event horizons to their role in galaxy formation. Learn about the latest research and what it means for our understanding of the universe...</p>
+        </div>
+    </div>
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>The Search for Habitable Exoplanets</h2>
+            <p>With missions like TESS and the James Webb Space Telescope, scientists are discovering exoplanets that could potentially support life. Explore the technologies and methods used to find these distant worlds...</p>
+        </div>
+    </div>
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>The Future of Space Tourism</h2>
+            <p>Companies like SpaceX and Blue Origin are making space travel more accessible. Learn about the innovations driving space tourism and what it could mean for the average person in the near future...</p>
+        </div>
+    </div>
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Colonizing Mars: Challenges</h2>
+            <p>Establishing a human presence on Mars is a monumental task. From radiation protection to sustainable habitats, discover the challenges and potential solutions for colonizing the Red Planet...</p>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Register for AstroNova</h2>
+            <div class="input">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="First Name" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-graduation-cap"></i>
+                <input type="text" placeholder="Major" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-calendar"></i>
+                <input type="text" placeholder="Year of Study" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Verify Password" required>
+            </div>
+            <button class="login-btn">Submit</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="astronova.js"></script>
+</body>
+</html>
