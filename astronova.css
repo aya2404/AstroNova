@@ -207,10 +207,12 @@ button {
     box-shadow: 0 4px 20px hsla(353, 100%, 8%, 0.1);
     padding-block: 4.5rem 3.5rem;
   }
-
+/*fixed--------------------------------------------*/
   .toggle {
     display: block; 
-    padding-right: 1rem;
+    padding-right: 0.5rem; 
+    position: relative; 
+    z-index: var(--z-fixed);
   }
   .nav-logo {
     padding-left: 1rem; 
@@ -241,12 +243,13 @@ button {
     text-align: center;
     row-gap: 2rem;
   }
-
+/*fixed---------------------------*/
   .close {
-    display: block;
+ display: block;
     position: absolute;
-    top: 3rem;
-    right: 2rem;
+    top: 1rem; /* Adjusted for better positioning */
+    right: 1rem; /* Adjusted for better positioning */
+  ascended: 0.5rem; /* Reduced to prevent overflow */
   }
 /*fix======================*/
   .show-menu {
@@ -749,6 +752,7 @@ button {
   z-index: var(--z-modal);
   align-items: center;
   justify-content: center;
+  overflow: auto;
 }
 
 .modal-content {
@@ -762,6 +766,7 @@ button {
   position: relative;
   color: var(--text-color);
   box-sizing: border-box;
+  margin: 1rem;
 }
 
 .modal-close {
@@ -775,13 +780,14 @@ button {
 
 .modal-close:hover {
   color: var(--primary-color);
-}
+} /*fix-----------------------------------*/
 @media screen and (max-width: 576px) {
   .modal-content {
     padding: 1rem; 
     max-width: 95vw; 
-    max-height: 85vh;
+    max-height: 90vh;
     font-size: var(--small-font-size); 
+    margin: 0.5rem;
   }
 }
 /*========================================== FOOTER ======================================*/
