@@ -140,6 +140,7 @@ button {
   max-width: 1200px; 
   margin-inline: auto;
   padding-inline: 1rem;
+  position: relative;
 }
 
 .nav-logo {
@@ -206,18 +207,19 @@ button {
     top: -100%;
     left: 0;
     width: 100%;
-    max-width: 1200px; 
-    margin-inline: auto;
+   /* max-width: 1200px; */
+   /* margin-inline: auto;*/
     background-color: var(--body-color);
     box-shadow: 0 4px 20px hsla(353, 100%, 8%, 0.1);
     padding-block: 4.5rem 3.5rem;
+    transition: top 0.4s;
   }
 /*fixed--------------------------------------------*/
  .toggle {
     display: block; 
     padding: 0 0.5rem; 
     position:absolute;
-    right: 10px; /*--------------------------*/
+    right: 1rem; /*--------------------------*/
     z-index: var(--z-fixed);
   }
   .nav-logo {
@@ -762,6 +764,7 @@ button {
   justify-content: center;
   overflow: auto;
   padding: 1rem; 
+  overflow-x: hidden;
 }
 
 .modal-content {
@@ -791,16 +794,18 @@ button {
 } /*fix-----------------------------------444444444444444444444444444444444444444444444444*/
 @media screen and (max-width: 576px) {
   .modal-content {
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 0.5rem;
-    width: calc(100% - 1rem); 
+    width: 90%; 
     max-width: 400px;
     max-height: 85vh;
     font-size: var(--small-font-size);
     overflow-y: auto;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
 }
 /*========================================== FOOTER ======================================*/
