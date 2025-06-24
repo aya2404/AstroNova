@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //  nav toggle================================================
+    //  nav toggle==========================================================
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navClose = document.getElementById('nav-close');
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // reg modal==================================================================
+    // reg modal====================================================================
     const registerLink = document.getElementById('register-link');
     const registerModal = document.getElementById('register-modal');
 
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         registerModal.style.display = 'flex';
     });
 
-    // close modals when clicking outside=============================================
+    // close modals when clicking outside======================================================
     window.addEventListener('click', (e) => {
         if (e.target.classList.contains('modal')) {
             modals.forEach(modal => {
