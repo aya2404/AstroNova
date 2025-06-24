@@ -203,6 +203,7 @@ button {
     top: -100%;
     left: 0;
     width: 100%;
+     max-width: 1200px;
     background-color: var(--body-color);
     box-shadow: 0 4px 20px hsla(353, 100%, 8%, 0.1);
     padding-block: 4.5rem 3.5rem;
@@ -210,12 +211,12 @@ button {
 /*fixed--------------------------------------------*/
   .toggle {
     display: block; 
-    padding-right: 0.5rem; 
+    padding: 0 0.5rem;; 
     position: relative; 
     z-index: var(--z-fixed);
   }
   .nav-logo {
-    padding-left: 1rem; 
+    padding-left: 0.5rem;
   }
 
   .header .container {
@@ -247,9 +248,9 @@ button {
   .close {
  display: block;
     position: absolute;
-    top: 1rem; /* Adjusted for better positioning */
-    right: 1rem; /* Adjusted for better positioning */
-  ascended: 0.5rem; /* Reduced to prevent overflow */
+    top: 1rem; 
+    right: 0.5rem; 
+  
   }
 /*fix======================*/
   .show-menu {
@@ -753,14 +754,15 @@ button {
   align-items: center;
   justify-content: center;
   overflow: auto;
+  padding: 1rem;
 }
 
 .modal-content {
   background: var(--container-color);
   padding: 1.5rem; 
   border-radius: 10px;
-  max-width: 90vw; 
-  width: 100%;
+  max-width: 100%; 
+  width: calc(100% - 2rem);;
   max-height: 80vh; 
   overflow-y: auto;
   position: relative;
@@ -784,7 +786,7 @@ button {
 @media screen and (max-width: 576px) {
   .modal-content {
     padding: 1rem; 
-    max-width: 95vw; 
+    width: calc(100% - 1rem);
     max-height: 90vh;
     font-size: var(--small-font-size); 
     margin: 0.5rem;
