@@ -1,11 +1,11 @@
-/*======================================== GOOGLE FONTS =================================*/
+/*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap');
 
-/*======================================== VARIABLES ========================================*/
+/*=============== VARIABLES ===============*/
 :root {
   --header-height: 3.5rem;
   
-  /*===================================== Colors ========================================*/
+  /*========== Colors ==========*/
   --primary-color: #6051d4;
   --primary-color-alt: #5649c0;
   --title-color: #f5f6fa;
@@ -15,7 +15,7 @@
   --container-color: #2f3640;
   --border-color: #353b48;
   
-  /*=========================================== Font and typography ======================================*/
+  /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
   --title-font: 'Orbitron', sans-serif;
   --biggest-font-size: 2.5rem;
@@ -27,14 +27,14 @@
   --small-font-size: .875rem;
   --smaller-font-size: .75rem;
   
-  /*==================================== Font weight ===================================*/
+  /*========== Font weight ==========*/
   --font-light: 300;
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
   
-  /*============================================== Margins Bottom =====================================*/
+  /*========== Margins Bottom ==========*/
   --mb-0-5: .5rem;
   --mb-0-75: .75rem;
   --mb-1: 1rem;
@@ -43,13 +43,13 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
   
-  /*======================================== z index ====================================*/
+  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
 
-/*================================================== BASE ======================================*/
+/*=============== BASE ===============*/
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +63,6 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  episode: true;
   background-color: var(--body-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -91,7 +90,7 @@ button {
   font-family: var’anova.js’(—body-font);
 }
 
-/*=============-===================================== REUSABLE CSS CLASSES =======-======================================*/
+/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1200px;
   margin-inline: auto;
@@ -192,13 +191,13 @@ button {
 }
 
 .toggle, .close {
-  display: none;
+  display: none; 
   font-size: 1.5rem;
   color: var(--title-color);
   cursor: pointer;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 767px) { 
   .menu {
     position: fixed;
     top: -100%;
@@ -207,7 +206,34 @@ button {
     background-color: var(--body-color);
     box-shadow: 0 4px 20px hsla(353, 100%, 8%, 0.1);
     padding-block: 4.5rem 3.5rem;
+  }
+
+  .toggle {
+    display: block; 
+    padding-right: 1rem;
+  }
+  .nav-logo {
+    padding-left: 1rem; 
+  }
+
+  .header .container {
+    justify-content: space-between;
+    background-color: transparent;
+ }
+ .header {
+    background-color:#29273b1f; 
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    box-shadow: 0 4px 20px hsla(353, 100%, 8%, 0.1);
+    padding-block: 4.5rem 3.5rem;
     transition: top 0.4s;
+    display: none;
   }
 
   .nav-list {
@@ -216,19 +242,24 @@ button {
     row-gap: 2rem;
   }
 
-  .toggle, .close {
-    display: block;
-  }
-
   .close {
+    display: block;
     position: absolute;
-    top: 1rem;
-    right: 1.5rem;
+    top: 3rem;
+    right: 2rem;
   }
-
+/*fix======================*/
   .show-menu {
-    top: 0;
+    top: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .toggle, .close {
+    display: none !important; }
 }
 
 .shadow-header {
@@ -239,7 +270,7 @@ button {
   width: 60%;
 }
 
-/*======================================== VIDEO BACKGROUND ====================================*/
+/*=============== VIDEO BACKGROUND ===============*/
 .video-background {
   position: fixed;
   top: 0;
@@ -269,11 +300,12 @@ button {
 /*=============== HOME ===============*/
 .home {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: var(--header-height);
+  padding-bottom: 2rem; 
 }
 
 .home-container {
@@ -302,20 +334,78 @@ button {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
-
-@media (max-width: 768px) {
+/*phones-------------*/
+@media screen and (max-width: 767px) {
   .home-container {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 
   .home-content {
-    text-align: center;
-    margin-bottom: 2rem;
+    max-width: 100%; 
+    padding: 0.5rem 0.5rem;
+  }
+
+  .home-title {
+    font-size: 1.8rem; 
+    margin-bottom: var(--mb-1);
+  }
+
+  .home-description {
+    font-size: 0.9rem; 
+    margin-bottom: var(--mb-1-5);
+  }
+
+  .button {
+    padding: 0.6rem 1.5rem; 
+    font-size: 0.9rem;
   }
 
   .moon {
-    max-width: 300px;
+    max-width: 250px; 
+    width: 100%; 
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home-title {
+    font-size: 1.5rem;
+  }
+
+  .home-description {
+    font-size: 0.875rem;
+  }
+
+  .button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.875rem;
+  }
+
+  .moon {
+    max-width: 200px; /* Further reduced for very small screens */
+  }
+}
+
+
+@media (max-width: 576px) {
+  .home-title {
+    font-size: 1.5rem;
+  }
+
+  .home-description {
+    font-size: 0.875rem;
+  }
+
+  .button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.875rem;
+  }
+
+  .moon {
+    max-width: 200px; /* Even smaller for very small screens */
   }
 }
 
@@ -323,7 +413,7 @@ button {
   font-size: var(--biggest-font-size);
   margin-bottom: var(--mb-1-5);
   line-height: 1.2;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.925);
   animation: fadeInUp 1s ease-out;
 }
 
@@ -342,17 +432,17 @@ button {
   border-radius: 50px;
   font-weight: var(--font-medium);
   transition: all 0.3s;
-  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+  box-shadow: 0 4px 15px rgba(123, 110, 224, 0.3);
   animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .button:hover {
   background: var(--primary-color-alt);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.5);
+  box-shadow: 0 6px 20px rgba(173, 168, 214, 0.5);
 }
 
-/*============================================ NEWS & ARTICLES ======---------------------===================*/
+/*============================== NEWS & ARTICLES =======================================*/
 .news-stricles {
   background-color: rgba(47, 54, 64, 0.8);
   backdrop-filter: blur(10px);
@@ -373,6 +463,10 @@ button {
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  min-height: 400px; 
 }
 
 .news-card:hover {
@@ -400,6 +494,7 @@ button {
   color: var(--text-color-light);
   font-size: var(--small-font-size);
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .more-information {
@@ -442,9 +537,12 @@ button {
   .news-img {
     height: 120px;
   }
+  .news-card {
+    min-height: 350px;
+  }
 }
 
-/*======================================================= EVENTS =========================================*/
+/*========================================== EVENTS ===========================*/
 .events {
   padding: 5rem 0;
   background-color: rgba(30, 39, 46, 0.8);
@@ -463,11 +561,14 @@ button {
 }
 
 .event-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: block;
+  height: 100px;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .event-img:hover {
@@ -486,36 +587,47 @@ button {
 
 .swiper-button-next,
 .swiper-button-prev {
-  background: rgba(0, 0, 0, 0.5);
+  background:rgba(0, 0, 0, 0);
   color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
+  font-size: 1rem;
+  /*box-shadow: none;*/
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: var(--primary-color);
+  /*background: var(--primary-color);*/
+  /*box-shadow: none;*/
+  color: #fff;
 }
 
 .swiper-button-next {
-  right: 10px;
+  right: 7px;
 }
 
 .swiper-button-prev {
-  left: 10px;
+  left: 7px;
+} /*DONT FORGET : fix the pagination!!!!!!!*/
+.event-sweper .swiper-pagination {
+  position: relative;
+  bottom: auto;
+  top: auto;
+  margin-top: 1rem;
+  text-align: center;
 }
-
 .swiper-pagination-bullet-active {
   background: var(--primary-color);
+  
 }
 
-/*===================================================== JOIN US =====================================*/
+/*=========================================== JOIN US =================================*/
 .join-us {
   padding: 5rem 0;
   background-color: rgba(47, 54, 64, 0.8);
@@ -538,7 +650,7 @@ button {
 
 .left-side {
   flex: 1;
-  background: url('astro-image/left.png') center/cover no-repeat;
+  background: url('left.png') center/cover no-repeat;
   display: none;
 }
 
@@ -625,7 +737,7 @@ button {
   font-weight: var(--font-medium);
 }
 
-/*============================================== MODAL =========================================*/
+/*==================================== MODAL ====================================*/
 .modal {
   display: none;
   position: fixed;
@@ -641,12 +753,15 @@ button {
 
 .modal-content {
   background: var(--container-color);
-  padding: 2rem;
+  padding: 1.5rem; 
   border-radius: 10px;
-  max-width: 600px;
-  width: 90%;
+  max-width: 90vw; 
+  width: 100%;
+  max-height: 80vh; 
+  overflow-y: auto;
   position: relative;
   color: var(--text-color);
+  box-sizing: border-box;
 }
 
 .modal-close {
@@ -661,16 +776,73 @@ button {
 .modal-close:hover {
   color: var(--primary-color);
 }
-
-/*=========================================== FOOTER ============--=============================*/
-.foot {
-  background-color: var(--container-color);
-  padding: 1.5rem 0;
-  text-align: center;
-  font-size: var(--small-font-size);
+@media screen and (max-width: 576px) {
+  .modal-content {
+    padding: 1rem; 
+    max-width: 95vw; 
+    max-height: 85vh;
+    font-size: var(--small-font-size); 
+  }
+}
+/*========================================== FOOTER ======================================*/
+.footer {
+  background-color: var(--body-color);
+  padding-block: 1rem; 
 }
 
-/*======================================== SCROLL UP =====================================*/
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 1rem; 
+}
+
+.footer__content p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--small-font-size); 
+}
+
+.footer__socials {
+  margin-left: auto; 
+  display: flex;
+  align-items: center; 
+  gap: 0.5rem; 
+}
+
+.footer__socials a {
+  font-size: 1.25rem; 
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.footer__socials a:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 576px) {
+  .footer__content {
+    flex-direction: column; 
+    align-items: center;
+    gap: 0.25rem; 
+  }
+
+.footer__content p {
+    text-align: right;
+  }
+
+  .footer__socials {
+    margin-left: 0; 
+    justify-content: center;
+  }
+}
+/*================================= SCROLL UP ========================================*/
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -699,7 +871,7 @@ button {
   bottom: 3rem;
 }
 
-/*============================================ SCROLL BAR ==========================================*/
+/*======================================= SCROLL BAR ================================*/
 ::-webkit-scrollbar {
   width: 0.6rem;
   background: var(--container-color);
@@ -710,7 +882,7 @@ button {
   border-radius: 0.5rem;
 }
 
-/*==================================================== BREAKPOINTS ===========================================*/
+/*============================================== BREAKPOINTS ===============================*/
 @media screen and (min-width: 992px) {
   .left-side {
     display: block;
@@ -771,7 +943,7 @@ button {
   }
 }
 
-/*===================================================== ANIMATIONS =======================================*/
+/*======================================= ANIMATIONS ===============================*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
