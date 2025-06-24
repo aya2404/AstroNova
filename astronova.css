@@ -650,7 +650,7 @@ button {
 
 .left-side {
   flex: 1;
-  background: url('left.png') center/cover no-repeat;
+  background: url('astro-image/left.png') center/cover no-repeat;
   display: none;
 }
 
