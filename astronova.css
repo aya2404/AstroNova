@@ -216,7 +216,8 @@ button {
  .toggle {
     display: block; 
     padding: 0 0.5rem; 
-    position: relative;
+    position:absolute;
+    right: 10px; /*--------------------------*/
     z-index: var(--z-fixed);
   }
   .nav-logo {
@@ -255,8 +256,8 @@ button {
 .close {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 0.5rem; 
+    top: 3rem;
+    right: 1rem; 
   }
 /*fix======================*/
   .show-menu {
@@ -787,13 +788,19 @@ button {
 
 .modal-close:hover {
   color: var(--primary-color);
-} /*fix-----------------------------------*/
+} /*fix-----------------------------------444444444444444444444444444444444444444444444444*/
 @media screen and (max-width: 576px) {
   .modal-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     padding: 0.5rem;
     width: calc(100% - 1rem); 
+    max-width: 400px;
     max-height: 85vh;
     font-size: var(--small-font-size);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 /*========================================== FOOTER ======================================*/
